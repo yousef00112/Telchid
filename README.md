@@ -1,2 +1,2 @@
 # Telchid
-asset for Telchid executor!
+assets for Telchid executor!
