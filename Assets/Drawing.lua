@@ -640,7 +640,6 @@ function DrawingLib.createFrame()
 end
 
 task.spawn(function()
-	print("[TELCHID] - Injected succesfully!")
 	local _game = game:GetService("CoreGui").Parent
 	local HttpService = _game:FindService("HttpService")
 end)
@@ -968,4 +967,4 @@ end
 return {Drawing = DrawingLib, functions = drawingFunctions}
 
 
---new verison fifififif ias97a97as8h9h7a789h789ash789789ash978sh
+--AVANCED DRAWING LIB MADE BY YOUSEF029
