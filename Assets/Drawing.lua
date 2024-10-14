@@ -120,7 +120,6 @@ function DrawingLib.createLine()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if lineObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -196,7 +195,6 @@ function DrawingLib.createText()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if textObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -267,7 +265,6 @@ function DrawingLib.createCircle()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if circleObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -327,7 +324,6 @@ function DrawingLib.createSquare()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if squareObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -388,7 +384,6 @@ function DrawingLib.createImage()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if imageObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -457,7 +452,6 @@ function DrawingLib.createQuad()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if quadObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -538,7 +532,6 @@ function DrawingLib.createTriangle()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if triangleObj[index] == nil then 
-				warn("Invalid property: " .. tostring(index))
 				return 
 			end
 
@@ -613,7 +606,6 @@ function DrawingLib.createFrame()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if frameObj[index] == nil then
-				warn("Invalid property: " .. tostring(index))
 				return
 			end
 
@@ -648,6 +640,7 @@ function DrawingLib.createFrame()
 end
 
 task.spawn(function()
+	print("[TELCHID] - Injected succesfully!")
 	local _game = game:GetService("CoreGui").Parent
 	local HttpService = _game:FindService("HttpService")
 end)
@@ -752,7 +745,6 @@ function DrawingLib.createTextButton()
 	}, {
 		__newindex = function(_, index, value)
 			if buttonObj[index] == nil then
-				warn("Invalid property: " .. tostring(index))
 				return
 			end
 
@@ -831,7 +823,6 @@ function DrawingLib.createTextLabel()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if labelObj[index] == nil then
-				warn("Invalid property: " .. tostring(index))
 				return
 			end
 
@@ -901,7 +892,6 @@ function DrawingLib.createTextBox()
 	return setmetatable({Parent = drawingUI}, {
 		__newindex = function(_, index, value)
 			if boxObj[index] == nil then
-				warn("Invalid property: " .. tostring(index))
 				return
 			end
 
@@ -978,4 +968,4 @@ end
 return {Drawing = DrawingLib, functions = drawingFunctions}
 
 
---lol xd lol xd
+--new verison fifififif ias97a97as8h9h7a789h789ash789789ash978sh
