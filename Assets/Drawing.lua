@@ -1,15 +1,10 @@
 local coreGui = game:GetService("CoreGui")
-task.spawn(function()
-	print("new drawing lib loaded")
-end)
--- objects
 local camera = workspace.CurrentCamera
 local drawingUI = Instance.new("ScreenGui")
 drawingUI.Name = "Drawing"
 drawingUI.IgnoreGuiInset = true
 drawingUI.DisplayOrder = 0x7fffffff
 drawingUI.Parent = coreGui
--- variables
 local drawingIndex = 0
 local uiStrokes = table.create(0)
 local baseDrawingObj = setmetatable({
@@ -39,7 +34,6 @@ local drawingFontsEnum = {
 	[2] = Font.fromEnum(Enum.Font.SourceSans),
 	[3] = Font.fromEnum(Enum.Font.RobotoMono),
 }
--- function
 local function getFontFromIndex(fontIndex: number): Font
 	return drawingFontsEnum[fontIndex]
 end
@@ -47,7 +41,6 @@ end
 local function convertTransparency(transparency: number): number
 	return math.clamp(1 - transparency, 0, 1)
 end
--- main
 local DrawingLib = {}
 DrawingLib.Fonts = {
 	["UI"] = 0,
@@ -377,8 +370,8 @@ function DrawingLib.new(drawingType)
 				if typeof(imageObj[index]) == "nil" then return end
 
 				if index == "Data" then
-					-- later
-				elseif index == "DataURL" then -- temporary property
+					--soon
+				elseif index == "DataURL" then
 					imageFrame.Image = value
 				elseif index == "Size" then
 					imageFrame.Size = UDim2.fromOffset(value.X, value.Y)
@@ -403,7 +396,7 @@ function DrawingLib.new(drawingType)
 						return imageObj:Remove()
 					end
 				elseif index == "Data" then
-					return nil -- TODO: add error here
+					return nil
 				end
 				return imageObj[index]
 			end,
@@ -455,7 +448,7 @@ function DrawingLib.new(drawingType)
 					PointD.Visible = true    
 				end
 				if Property == "Filled" then
-					-- i'll do this later
+					--later
 				end
 				if Property == "Color" then
 					PointA.Color = Value
@@ -515,7 +508,7 @@ function DrawingLib.new(drawingType)
 						linePoint[index] = value
 					end
 				elseif index == "Filled" then
-					-- later
+					--later
 				end
 				triangleObj[index] = value
 			end,
@@ -538,4 +531,4 @@ end
 return {Drawing = DrawingLib}
 
 
---NEW SHIT
+-- advanced drawing lib made by yousef029
